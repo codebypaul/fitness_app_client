@@ -4,6 +4,7 @@ import axios from 'axios';
 import jwt_decode from 'jwt-decode';
 import setAuthToken from '../utils/setAuthToken';
 import { Redirect } from 'react-router-dom';
+import GoogleBtn from './GoogleBtn'
 const REACT_APP_SERVER_URL = process.env.REACT_APP_SERVER_URL
 // import keys from '../utils/credentials';
 // const { REACT_APP_SERVER_URL } = keys;
@@ -45,7 +46,15 @@ const Login = (props) => {
     if (props.user) return <Redirect to='/profile' />
 
     return (
-        <div className="row mt-4 pb-5">
+        <div className="row my-4 pb-5">
+            <div className="col-md-7 offset-md-3 pb-5">
+                <div className="card d-flex align-items-center p-5">
+                    <h2 className="">
+                        Sign up with your Google account
+                    </h2>
+                    <GoogleBtn/>
+                </div>
+            </div>
             <div className="col-md-7 offset-md-3 pb-5">
                 <div className="card card-body">
                     <h2 className="py-2">Login</h2>
