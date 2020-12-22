@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import { Redirect } from 'react-router-dom';
-import GoogleBtn from './GoogleBtn'
+import GoogleBtn from '../components/GoogleBtn'
 const REACT_APP_SERVER_URL = process.env.REACT_APP_SERVER_URL;
 // import keys from '../utils/credentials';
 // const { REACT_APP_SERVER_URL } = keys;

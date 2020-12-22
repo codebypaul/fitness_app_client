@@ -4,7 +4,7 @@ import axios from 'axios';
 import jwt_decode from 'jwt-decode';
 import setAuthToken from '../utils/setAuthToken';
 import { Redirect } from 'react-router-dom';
-import GoogleBtn from './GoogleBtn'
+import GoogleBtn from '../components/GoogleBtn'
 const REACT_APP_SERVER_URL = process.env.REACT_APP_SERVER_URL
 // import keys from '../utils/credentials';
 // const { REACT_APP_SERVER_URL } = keys;
@@ -48,7 +48,7 @@ const Login = (props) => {
     return (
         <div className="row my-4 pb-5">
             <div className="col-md-7 offset-md-3 pb-5">
-                <div className="card d-flex align-items-center p-5">
+                <div className="card d-flex align-items-center text-center p-5">
                     <h2 className="">
                         Sign up with your Google account
                     </h2>
