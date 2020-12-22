@@ -7,13 +7,16 @@ import setAuthToken from './utils/setAuthToken';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 // Components
-import Welcome from './components/Welcome';
+import Welcome from './pages/Welcome';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
-import Profile from './components/Profile';
-import Signup from './components/Signup';
-import Login from './components/Login';
-import About from './components/About';
+//Pages
+import Profile from './pages/Profile';
+import Signup from './pages/Signup';
+import Login from './pages/Login';
+import About from './pages/About';
+import Workouts from './pages/Workouts'
+import Nutrition from './pages/Nutrition'
 
 const PrivateRoute = ({ component: Component, ...rest }) => {
   const user = localStorage.getItem('jwtToken');
@@ -65,6 +68,8 @@ function App() {
           <Route path='/about' component={ About } />
           <PrivateRoute path="/profile" component={ Profile } user={currentUser}/>
           <Route exact path="/" component={ Welcome }/>
+          <Route path="/workouts" component={ Workouts }/>
+          <Route path="/nutriton" component={ Nutrition }/>
         </Switch>
       </div>
       <Footer />

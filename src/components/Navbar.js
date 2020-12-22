@@ -1,46 +1,83 @@
 import React from 'react';
 import { NavLink, Link } from 'react-router-dom';
-
+import styled from 'styled-components'
 const Navbar = (props) => {
     return (
-        <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
-            <div className="container">
-                <Link className="navbar-brand" to="/">MERN Auth</Link>
-                <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample07" aria-controls="#navbarsExample07" aria-expanded="false" aria-label="Toggle navigation">
+        <NavWrapper className="navbar navbar-expanded text-white px-5">
+                <Link className="brand" to="/">GeneralFit
+                <i className="fab fa-typo3" />
+                </Link>
+                {/* <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample07" aria-controls="#navbarsExample07" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>
-                </button>
-                <div className="collapse navbar-collapse" id="navbarsExample07">
-                    <ul className="navbar-nav mr-auto">
-                        <li className="nav-item">
-                            <NavLink className="nav-link" exact to="/">Home</NavLink>
-                        </li>
-                        <li className="nav-item">
-                            <NavLink className="nav-link"  to="/about">About</NavLink>
-                        </li>
-                    </ul>
+                </button> */}
+                {/* <div className="collapse navbar-collapse" id="navbarsExample07"> */}
+                    <div className="ml-auto d-flex">
+                        <NavLink className="text-white navLink" exact to="/">
+                        Home</NavLink>
+                        <NavLink className="text-white navLink"  to="/about">
+                        About
+                        </NavLink>
+                        <NavLink className="text-white navLink"  to="/workouts">
+                        Workouts
+                        </NavLink>
+                        <NavLink className="text-white navLink"  to="/nutrition">
+                        Nutrition
+                        </NavLink>
+                    </div>
                     {
                         props.isAuth 
-                        ? <ul className="navbar-nav ml-auto">
-                            <li className="nav-item">
-                                <NavLink className="nav-link"  to="/profile">Profile</NavLink>
-                            </li>
-                            <li className="nav-item">
-                                <span onClick={props.handleLogout} className="nav-link logout-link">Logout</span>
-                            </li>
-                        </ul>
-                        : <ul className="navbar-nav ml-auto">
-                            <li className="nav-item">
-                                <NavLink className="nav-link"  to="/signup">Create Account</NavLink>
-                            </li>
-                            <li className="nav-item">
-                                <NavLink className="nav-link"  to="/login">Login</NavLink>
-                            </li>
-                        </ul>
+                        ? <AuthOptions>
+                   
+                                <NavLink className="mr-3"  to="/profile">
+                                <AuthBtn>
+                                Profile
+                                </AuthBtn>
+                                </NavLink>
+                                <AuthBtn onClick={props.handleLogout} className=" logout-link">
+                                Logout
+                                </AuthBtn>
+
+                        </AuthOptions>
+                        : <AuthOptions>
+         
+                                <NavLink className="mr-3"  to="/signup">
+                                <AuthBtn>
+
+                                Create Account
+                                </AuthBtn>
+                                </NavLink>
+           
+                                <NavLink className=""  to="/login">
+                                <AuthBtn>
+                                Login
+                                </AuthBtn>
+                                </NavLink>
+
+                        </AuthOptions>
                     }
-                </div>
-            </div>
-        </nav>
+                {/* </div> */}
+
+        </NavWrapper>
     );
 }
 
+const AuthOptions = styled.div`
+    display: flex;
+
+`
+const AuthBtn = styled.button`
+    border: .25rem solid white;
+    border-radius: .5rem;
+    padding: .5rem 1rem;
+    background: transparent;
+    color: white;
+`
+
+const NavWrapper = styled.nav`
+    position: sticky;
+    top: 0;
+    box-shadow: 0 0 3px 3px rgba(175,175,175,1);
+    z-index: 1;
+    background: var(--schemeGradient);
+`
 export default Navbar;

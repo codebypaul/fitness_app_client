@@ -1,3 +1,6 @@
+:root{
+  --schemeGradient : linear-gradient(90deg, #1B9AAA 0%, #495867 100%);
+}
 html {
   position: relative;
   min-height: 100%;
@@ -11,4 +14,21 @@ body {
   width: 100%;
   height: 60px; /* Set the fixed height of the footer here */
   line-height: 60px; /* Vertically center the text there */
+}
+
+/*-------navbar--------*/
+.brand{
+  font-size: 2.5rem;
+  color: rgba(200,200,200,1);
+  transition: .3s linear all;
+}
+.brand:hover{
+  text-decoration: none;
+  color: rgba(255,255,255,1);
+}
+.logout-link{
+  cursor:pointer;
+}
+.navLink{
+  margin: 0 .75rem;
 }
