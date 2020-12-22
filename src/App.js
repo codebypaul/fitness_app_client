@@ -8,8 +8,9 @@ import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 // Components
 import Welcome from './pages/Welcome';
-import Navbar from './components/Navbar';
+import Navbartwo from './components/Navbartwo';
 import Footer from './components/Footer';
+
 //Pages
 import Profile from './pages/Profile';
 import Signup from './pages/Signup';
@@ -58,7 +59,8 @@ function App() {
 
   return (
     <div className="App">
-      <Navbar handleLogout={handleLogout} isAuth={isAuthenticated} />
+      {/* <Navbar handleLogout={handleLogout} isAuth={isAuthenticated} /> */}
+      <Navbartwo handleLogout={handleLogout} isAuth={isAuthenticated}/>
       <div className="container mt-5">
         <Switch>
           <Route path='/signup' component={ Signup } />
@@ -69,7 +71,7 @@ function App() {
           <PrivateRoute path="/profile" component={ Profile } user={currentUser}/>
           <Route exact path="/" component={ Welcome }/>
           <Route path="/workouts" component={ Workouts }/>
-          <Route path="/nutriton" component={ Nutrition }/>
+          <Route path="/nutrition" component={ Nutrition }/>
         </Switch>
       </div>
       <Footer />
