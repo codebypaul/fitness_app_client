@@ -51,6 +51,7 @@ const Signup = () => {
                 console.log(error);
             })
         }
+        setRedirect(true)
     }
 
     const responseSuccess = async (response) => {
@@ -73,6 +74,7 @@ const Signup = () => {
         .catch(error => {
             console.log(error);
         })
+        setRedirect(true)
     }
 
     if (redirect) return <Redirect to='/login' />
