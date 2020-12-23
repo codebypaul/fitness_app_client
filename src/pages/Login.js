@@ -6,13 +6,33 @@ import setAuthToken from '../utils/setAuthToken';
 import { Redirect } from 'react-router-dom';
 import GoogleBtn from '../components/GoogleBtn'
 const REACT_APP_SERVER_URL = process.env.REACT_APP_SERVER_URL
-// import keys from '../utils/credentials';
-// const { REACT_APP_SERVER_URL } = keys;
 
-console.log(process.env.REACT_APP_SERVER_URL);
 const Login = (props) => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+
+    const responseSuccess = async (response) => {
+        const profile = response.profileObj
+        const userData = {
+            googleId: profile.googleId,
+            email: profile.email
+        }
+        axios.post(`${REACT_APP_SERVER_URL}/api/users/login`, userData)
+        .then(response => {
+            const { token } = response.data;
+            // Save token to localStorage
+            localStorage.setItem('jwtToken', token);
+            // Set token to auth header
+            setAuthToken(token);
+            // Decode token to get the user data
+            const decoded = jwt_decode(token);
+            // Set current user
+            props.nowCurrentUser(decoded);
+        })
+        .catch(error =>{
+            console.log(error);
+        })
+    }
 
     const handleEmail = (e) => {
         setEmail(e.target.value);
@@ -52,7 +72,7 @@ const Login = (props) => {
                     <h2 className="">
                         Sign up with your Google account
                     </h2>
-                    <GoogleBtn/>
+                    <GoogleBtn responseSuccess={responseSuccess}/>
                 </div>
             </div>
             <div className="col-md-7 offset-md-3 pb-5">

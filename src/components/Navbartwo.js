@@ -10,7 +10,7 @@ import Nav from 'react-bootstrap/Nav'
 
 const Navbartwo = (props) => {
     return (
-      <Navbar className="Navbar sticky-top" expand="lg" fixedTop>
+      <Navbar className="Navbar sticky-top" expand="lg">
         <Navbar.Brand href="/">
         <div className="brand">
           GeneralFit
