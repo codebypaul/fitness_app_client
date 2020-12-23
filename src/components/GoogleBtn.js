@@ -8,7 +8,6 @@ const GoogleBtn = (props)=> {
         console.log(response);
         return <Redirect to='/signup'/>
     }
-    console.log(props.responseSuccess);
     return (
         <GoogleLogin
             clientId="477560648585-v6gq6k6o8ce0rnmvak1fkbfp3uiq8icd.apps.googleusercontent.com"

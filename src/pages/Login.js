@@ -70,7 +70,7 @@ const Login = (props) => {
             <div className="col-md-7 offset-md-3 pb-5">
                 <div className="card d-flex align-items-center text-center p-5">
                     <h2 className="">
-                        Sign up with your Google account
+                        Login with your Google account
                     </h2>
                     <GoogleBtn responseSuccess={responseSuccess}/>
                 </div>
