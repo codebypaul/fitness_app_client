@@ -61,7 +61,7 @@ function App() {
     <div className="App">
       {/* <Navbar handleLogout={handleLogout} isAuth={isAuthenticated} /> */}
       <Navbartwo handleLogout={handleLogout} isAuth={isAuthenticated}/>
-      <div className="container mt-5">
+
         <Switch>
           <Route path='/signup' component={ Signup } />
           <Route 
@@ -73,7 +73,6 @@ function App() {
           <Route path="/workouts" component={ Workouts }/>
           <Route path="/nutrition" component={ Nutrition }/>
         </Switch>
-      </div>
       <Footer />
     </div>
   );
