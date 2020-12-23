@@ -4,8 +4,6 @@ import axios from 'axios';
 import { Redirect } from 'react-router-dom';
 import GoogleBtn from '../components/GoogleBtn'
 const REACT_APP_SERVER_URL = process.env.REACT_APP_SERVER_URL;
-// import keys from '../utils/credentials';
-// const { REACT_APP_SERVER_URL } = keys;
 
 const Signup = () => {
     const [firstName, setFirstName] = useState('');
@@ -55,6 +53,28 @@ const Signup = () => {
         }
     }
 
+    const responseSuccess = async (response) => {
+        console.log(response);
+        const profile = response.profileObj
+
+        const newUser = {
+            googleId: profile.googleId,
+            displayName: profile.name,
+            firstName: profile.givenName,
+            lastName: profile.familyName,
+            email: profile.email,
+            image: profile.imageUrl
+        }
+        axios.post(`${REACT_APP_SERVER_URL}/api/users/register`, newUser)
+        .then(response => {
+            console.log(response);
+            setRedirect(true);
+        })
+        .catch(error => {
+            console.log(error);
+        })
+    }
+
     if (redirect) return <Redirect to='/login' />
     return (
         <div className="row my-4 pb-5">
@@ -63,7 +83,7 @@ const Signup = () => {
                     <h2 className="">
                         Sign up with your Google account
                     </h2>
-                    <GoogleBtn/>
+                    <GoogleBtn responseSuccess={responseSuccess}/>
                 </div>
             </div>
             <div className="col-md-7 offset-md-3 pb-5">
