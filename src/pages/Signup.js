@@ -79,46 +79,42 @@ const Signup = () => {
 
     if (redirect) return <Redirect to='/login' />
     return (
-        <div className="row my-4 pb-5">
-            <div className="col-md-7 offset-md-3 pb-5">
-                <div className="card d-flex align-items-center p-5">
-                    <h2 className="">
-                        Sign up with your Google account
-                    </h2>
-                    <GoogleBtn responseSuccess={responseSuccess}/>
-                </div>
+        <div className="my-4 pb-5">
+            <div className="card d-flex align-items-center p-5">
+                <h2 className="">
+                    Sign up with your Google account
+                </h2>
+                <GoogleBtn responseSuccess={responseSuccess}/>
             </div>
-            <div className="col-md-7 offset-md-3 pb-5">
-                <div className="card card-body my-3">
-                    <h2 className="py-2">Signup</h2>
-                    <form onSubmit={handleSubmit}>
-                        <div className="form-group">
-                            <label htmlFor="name">First Name</label>
-                            <input type="text" name="First Name" value={firstName} onChange={handleFirstName} className="form-control" />
-                        </div>
-                        <div className="form-group">
-                            <label htmlFor="name">Last Name</label>
-                            <input type="text" name="Last Name" value={lastName} onChange={handleLastName} className="form-control" />
-                        </div>
-                        <div className="form-group">
-                            <label htmlFor="email">Email</label>
-                            <input type="email" name="email" value={email} onChange={handleEmail} className="form-control" />
-                        </div>
-                        <div className="form-group">
-                            <label htmlFor="email">Date of Birth</label>
-                            <input type="date" name="dob" value={DOB} onChange={handleDOB} className="form-control" />
-                        </div>
-                        <div className="form-group">
-                            <label htmlFor="password">Password</label>
-                            <input type="password" name="password" value={password} onChange={handlePassword} className="form-control" />
-                        </div>
-                        <div className="form-group">
-                            <label htmlFor="confirmPassword">Confirm Password</label>
-                            <input type="password" name="confirmPassword" value={confirmPassword} onChange={handleConfirmPassword} className="form-control" />
-                        </div>
-                        <button type="submit" className="btn btn-primary float-right">Submit</button>
-                    </form>
-                </div>
+            <div className="card card-body my-3">
+                <h2 className="py-2">Signup</h2>
+                <form onSubmit={handleSubmit}>
+                    <div className="form-group">
+                        <label htmlFor="name">First Name</label>
+                        <input type="text" name="First Name" value={firstName} onChange={handleFirstName} className="form-control" />
+                    </div>
+                    <div className="form-group">
+                        <label htmlFor="name">Last Name</label>
+                        <input type="text" name="Last Name" value={lastName} onChange={handleLastName} className="form-control" />
+                    </div>
+                    <div className="form-group">
+                        <label htmlFor="email">Email</label>
+                        <input type="email" name="email" value={email} onChange={handleEmail} className="form-control" />
+                    </div>
+                    <div className="form-group">
+                        <label htmlFor="email">Date of Birth</label>
+                        <input type="date" name="dob" value={DOB} onChange={handleDOB} className="form-control" />
+                    </div>
+                    <div className="form-group">
+                        <label htmlFor="password">Password</label>
+                        <input type="password" name="password" value={password} onChange={handlePassword} className="form-control" />
+                    </div>
+                    <div className="form-group">
+                        <label htmlFor="confirmPassword">Confirm Password</label>
+                        <input type="password" name="confirmPassword" value={confirmPassword} onChange={handleConfirmPassword} className="form-control" />
+                    </div>
+                    <button type="submit" className="btn btn-primary float-right">Submit</button>
+                </form>
             </div>
         </div>
     )

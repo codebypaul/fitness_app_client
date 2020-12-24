@@ -66,19 +66,19 @@ const Login = (props) => {
     if (props.user) return <Redirect to='/profile' />
 
     return (
-        <div className="row my-4 pb-5">
-            <div className="col-md-7 offset-md-3 pb-5">
+        <div className="my-4 pb-5">
+
                 <div className="card d-flex align-items-center text-center p-5">
                     <h2 className="">
                         Login with your Google account
                     </h2>
                     <GoogleBtn responseSuccess={responseSuccess}/>
                 </div>
-            </div>
-            <div className="col-md-7 offset-md-3 pb-5">
+
+
                 <div className="card card-body">
                     <h2 className="py-2">Login</h2>
-                    <form onSubmit={handleSubmit}>
+                    <form className="" onSubmit={handleSubmit}>
                         <div className="form-group">
                             <label htmlFor="email">Email</label>
                             <input type="email" name="email" value={email} onChange={handleEmail} className="form-control" />
@@ -90,7 +90,7 @@ const Login = (props) => {
                         <button type="submit" className="btn btn-primary float-right">Submit</button>
                     </form>
                 </div>
-            </div>
+
         </div>
     )
 }
