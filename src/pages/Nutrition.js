@@ -5,6 +5,7 @@ const Nutrition = () => {
         <h1>Nutrition</h1>
         <p>GAINS.RESULTS.AMAZING.</p>
     </div>
+    <div className="cards mx-auto">
       <div class="container">
         <div class="row row-cols-2">
           <div class="col">
@@ -77,6 +78,7 @@ const Nutrition = () => {
           </div>
         </div>
       </div>
+    </div>
     </>
   );
 };

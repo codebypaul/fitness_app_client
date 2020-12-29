@@ -12,7 +12,7 @@ const Footer = () => {
 }
 
 const FooterWrapper = styled.footer`
-    background: #FE5F55;
+    background: #1D3557;
     color: white;
 `
 export default Footer;

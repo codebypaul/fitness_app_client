@@ -39,10 +39,10 @@ body {
 }
 
 .Navbar{
-  background: #FE5F55;
+  background: #1D3557;
   display: flex;
   align-items: center;
-  box-shadow: 0 0 5px 5px rgb(253, 14, 14);
+  box-shadow: 0 0 5px 5px rgb(38, 38, 52);
   z-index: 1;
 }
 
@@ -50,9 +50,14 @@ body {
 
 .cards {
   padding: 4rem;
-  background: #F7F7ff;
+  background: #F1FAEE;
 }
 
+.cards > p {
+  width: 50%;
+  margin: 0 auto;
+  margin-bottom: 4rem;
+}
 .card {
   display: flex;
   flex-flow: row;
@@ -110,7 +115,7 @@ video {
 }
 
 .main-container > h1 {
-  color: #fff;
+  color: #F1FAEE;
   text-align: center;
   font-size: 100px;
   margin-top: -100px;
@@ -118,7 +123,7 @@ video {
 
 .main-container > p {
   margin-top: 8px;
-  color: #fff;
+  color: #F1FAEE;
   text-align: center;
   font-size: 32px;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
@@ -129,7 +134,7 @@ video {
 @media screen and (max-width: 960px) {
 
   .main-container > h1 {
-      color: #fff;
+      color: #F1FAEE;
       font-size: 70px;
       margin-top: -150px;
     }
@@ -139,14 +144,14 @@ video {
 @media screen and (max-width: 768px) {
 
   .main-container > h1 {
-      color: #fff;
+      color: #F1FAEE;
       font-size: 70px;
       margin-top: -150px;
     }
     
     .main-container > p {
       margin-top: 8px;
-      color: #fff;
+      color: #F1FAEE;
       font-size: 30px;
       font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
         'Lucida Sans', Arial, sans-serif;
@@ -170,7 +175,7 @@ video {
 }
 
 .main-image-container > h1 {
-  color: #fff;
+  color: #F1FAEE;
   text-align: center;
   font-size: 100px;
   margin-top: -100px;
@@ -178,7 +183,7 @@ video {
 
 .main-image-container > p {
   margin-top: 8px;
-  color: #fff;
+  color: #F1FAEE;
   text-align: center;
   font-size: 32px;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
@@ -189,7 +194,7 @@ video {
 @media screen and (max-width: 960px) {
 
   .main-image-container > h1 {
-      color: #fff;
+      color: #F1FAEE;
       font-size: 70px;
       margin-top: -150px;
     }
@@ -199,14 +204,14 @@ video {
 @media screen and (max-width: 768px) {
 
   .main-image-container > h1 {
-      color: #fff;
+      color: #F1FAEE;
       font-size: 70px;
       margin-top: -150px;
     }
     
     .main-image-container > p {
       margin-top: 8px;
-      color: #fff;
+      color: #F1FAEE;
       font-size: 30px;
       font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
         'Lucida Sans', Arial, sans-serif;
@@ -219,6 +224,21 @@ video {
 
 .workouts-img {
   background: url('https://images.unsplash.com/photo-1597076537061-a6b58163aa45?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2100&q=80') center center/cover no-repeat;
+  height: 50vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.3);
+  object-fit: contain;
+}
+
+
+/*------- ABOUT US --------*/
+
+.about-us-img {
+  background: url('https://images.unsplash.com/photo-1541746972996-4e0b0f43e02a?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2100&q=80') center center/cover no-repeat;
   height: 50vh;
   width: 100%;
   display: flex;
