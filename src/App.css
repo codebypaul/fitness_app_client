@@ -152,3 +152,79 @@ video {
         'Lucida Sans', Arial, sans-serif;
     }
 }
+
+/*------- Nutrition --------*/
+
+
+
+.main-image-container {
+  background: url('https://images.unsplash.com/photo-1498837167922-ddd27525d352?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2100&q=80') center center/cover no-repeat;
+  height: 50vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.3);
+  object-fit: contain;
+}
+
+.main-image-container > h1 {
+  color: #fff;
+  text-align: center;
+  font-size: 100px;
+  margin-top: -100px;
+}
+
+.main-image-container > p {
+  margin-top: 8px;
+  color: #fff;
+  text-align: center;
+  font-size: 32px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
+    'Lucida Sans', Arial, sans-serif;
+}
+
+
+@media screen and (max-width: 960px) {
+
+  .main-image-container > h1 {
+      color: #fff;
+      font-size: 70px;
+      margin-top: -150px;
+    }
+    
+}
+
+@media screen and (max-width: 768px) {
+
+  .main-image-container > h1 {
+      color: #fff;
+      font-size: 70px;
+      margin-top: -150px;
+    }
+    
+    .main-image-container > p {
+      margin-top: 8px;
+      color: #fff;
+      font-size: 30px;
+      font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
+        'Lucida Sans', Arial, sans-serif;
+    }
+}
+
+
+
+/*------- Workouts --------*/
+
+.workouts-img {
+  background: url('https://images.unsplash.com/photo-1597076537061-a6b58163aa45?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2100&q=80') center center/cover no-repeat;
+  height: 50vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.3);
+  object-fit: contain;
+}
