@@ -21,9 +21,9 @@ const Navbartwo = (props) => {
       <Navbar.Collapse className="" id="basic-navbar-nav">
         <Nav className="ml-auto d-flex align-items-center">
           <Nav.Link  className="navLink text-white" href="/">Home</Nav.Link>
-          <Nav.Link  className="navLink text-white" href="/about">About</Nav.Link>
           <Nav.Link  className="navLink text-white" href="/workouts">Workouts</Nav.Link>
           <Nav.Link  className="navLink text-white" href="/nutrition">Nutrition</Nav.Link>
+          <Nav.Link  className="navLink text-white" href="/about">About</Nav.Link>
           {
             props.isAuth 
             ? <AuthOptions>
