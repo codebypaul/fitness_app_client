@@ -17,9 +17,13 @@ const Workouts = () => {
         <div className="row center">
           {data.bodyParts.map((muscle) => (
                       <div class="card">
-                        <img class="medium" src={muscle.image} alt={muscle.category} />
+                        <a href={muscle.path}>
+                          <img class="medium" src={muscle.image} alt={muscle.category} />
+                        </a>
                       <div class="card-body">
+                        <a href={muscle.path}>
                           <h2>{muscle.category}</h2>
+                        </a>
                       </div>
                     </div>
           ))}
