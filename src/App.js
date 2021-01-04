@@ -18,6 +18,9 @@ import Login from './pages/Login';
 import About from './pages/About';
 import Workouts from './pages/Workouts'
 import Nutrition from './pages/Nutrition'
+import AllMeals from './pages/AllMeals'
+import AllWorkouts from './pages/AllWorkouts'
+
 
 const PrivateRoute = ({ component: Component, ...rest }) => {
   const user = localStorage.getItem('jwtToken');
@@ -72,6 +75,7 @@ function App() {
           <Route exact path="/" component={ Welcome }/>
           <Route path="/workouts" component={ Workouts }/>
           <Route path="/nutrition" component={ Nutrition }/>
+          <Route path='/bodypart' component={ AllWorkouts }/>
         </Switch>
       <Footer />
     </div>

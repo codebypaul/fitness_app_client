@@ -1,4 +1,12 @@
+import { useEffect, useState } from 'react'
+import { Redirect } from 'react-router-dom'
 const Workouts = () => {
+  const [bodypart, setBodyPart] = useState('')
+
+  console.log(bodypart);
+  // useEffect(()=>{
+
+  // })
   return (
       <>
         <div className="main-image-container workouts-img">
@@ -18,9 +26,16 @@ const Workouts = () => {
                 <div class="card-body">
                   <p class="card-text">ARMS</p>
                 </div>
-                <a href="nutrition" class="btn btn-outline-danger">
+                <button onClick={()=>{
+                  setBodyPart({bodypart:'triceps'})
+                  return <Redirect to={{
+                    pathname:'/bodypart'
+                    // state: bodypart
+                  }}/>
+                }} 
+                class="btn btn-outline-danger">
                   View Workouts
-                </a>
+                </button>
               </div>
             </div>
             <div class="col">
