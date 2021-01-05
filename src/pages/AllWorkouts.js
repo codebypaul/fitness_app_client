@@ -8,7 +8,7 @@ export default function Workouts(props) {
 
   useEffect(() => {
     axios
-      .get("https://general-fit.herokuapp.com/workouts")
+      .get("https://fitness-app-back-end.herokuapp.com/api/workouts")
       .then((response) => {
         console.log(response);
         setBodyParts(response.data);

@@ -35,7 +35,7 @@ const data = {
             _id: 1,
             nutrient: 'High Carbs',
             image: 'https://images.unsplash.com/photo-1563379926898-05f4575a45d8?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2550&q=80',
-            path: '/nutrition/carbs'
+            path: '/carbs'
 
         },
 
@@ -43,7 +43,7 @@ const data = {
             _id: 2,
             nutrient: 'High Protein',
             image: 'https://images.unsplash.com/photo-1532550907401-a500c9a57435?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2100&q=80',
-            path: '/nutrition/protein'
+            path: '/protein'
 
         },
 
@@ -51,7 +51,7 @@ const data = {
             _id: 3,
             nutrient: 'Low Fat',
             image: 'https://i.ibb.co/tMPvK6m/brooke-lark-W9-OKrx-Bqi-ZA-unsplash.jpg',
-            path: '/nutrition/fat'
+            path: '/fat'
 
         },
 
@@ -59,7 +59,7 @@ const data = {
             _id: 4,
             nutrient: 'Vegetarian',
             image: 'https://images.unsplash.com/photo-1541519227354-08fa5d50c44d?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=2552&q=80',
-            path: '/nutrition/vegetarian'
+            path: '/vegetarian'
 
         },
 

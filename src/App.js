@@ -76,6 +76,7 @@ function App() {
           <Route path="/workouts" component={ Workouts }/>
           <Route path="/nutrition" component={ Nutrition }/>
           <Route path='/arms' component={ AllWorkouts }/>
+          <Route path='/carbs' component={ AllMeals }/>
         </Switch>
       <Footer />
     </div>
