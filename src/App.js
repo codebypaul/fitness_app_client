@@ -18,9 +18,11 @@ import Login from './pages/Login';
 import About from './pages/About';
 import Workouts from './pages/Workouts'
 import Nutrition from './pages/Nutrition'
-import AllMeals from './pages/AllMeals'
+// import AllMeals from './pages/AllMeals'
 import AllWorkouts from './pages/AllWorkouts'
-
+import WorkoutDetail from './pages/WorkoutDetail'
+import AllMeals from './pages/AllMeals'
+import NutritionDetail from './pages/NutritionDetail'
 
 const PrivateRoute = ({ component: Component, ...rest }) => {
   const user = localStorage.getItem('jwtToken');
@@ -33,7 +35,6 @@ function App() {
   // Set state values
   const [currentUser, setCurrentUser] = useState('');
   const [isAuthenticated, setIsAuthenticated] = useState(true);
-
   useEffect(() => {
     let token;
     // if there is no token in localStorage, then the user is in authenticated
@@ -75,7 +76,10 @@ function App() {
           <Route exact path="/" component={ Welcome }/>
           <Route path="/workouts" component={ Workouts }/>
           <Route path="/nutrition" component={ Nutrition }/>
-          <Route path='/arms' component={ AllWorkouts }/>
+          <Route path='/workouts-:bodypart' component={ AllWorkouts }/>
+          <Route path='/this-workout:id' component={WorkoutDetail}/>
+          <Route path='/nutrition-:foodType' component={ AllMeals }/>
+          <Route path='/this-food:name' component={NutritionDetail}/>
         </Switch>
       <Footer />
     </div>

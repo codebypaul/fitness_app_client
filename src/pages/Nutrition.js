@@ -1,4 +1,5 @@
 import data from '../data'
+import { Link } from 'react-router-dom'
 
 const Nutrition = () => {
   return (
@@ -15,9 +16,11 @@ const Nutrition = () => {
                           <img class="medium" src={nutrition.image} alt={nutrition.nutrient} />
                         </a>
                       <div class="card-body">
-                        <a href={nutrition.path}>
+                        <Link to={{
+                          pathname: `/nutrition-${nutrition.path}`
+                        }}>
                           <h2>{nutrition.nutrient}</h2>
-                        </a>
+                        </Link>
                       </div>
                     </div>
           ))}

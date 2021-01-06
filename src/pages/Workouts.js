@@ -1,12 +1,6 @@
-import { useEffect, useState } from 'react'
-import { Redirect } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import data from '../data'
 const Workouts = () => {
-  const [bodypart, setBodyPart] = useState('')
-
-  console.log(bodypart);
-
- 
   return (
       <>
         <div className="main-image-container workouts-img">
@@ -21,9 +15,9 @@ const Workouts = () => {
                           <img class="medium" src={muscle.image} alt={muscle.category} />
                         </a>
                       <div class="card-body">
-                        <a href={muscle.path}>
+                        <Link to={`/workouts-${muscle.path}`}>
                           <h2>{muscle.category}</h2>
-                        </a>
+                        </Link>
                       </div>
                     </div>
           ))}
