@@ -28,7 +28,7 @@ export default function Meals(props) {
                   <img class="medium" src={meal.image} alt={meal.name} />
                 </a>
                 <div class="card-body">
-                  <Link to={{ pathname: `/this-food${meal.name}` }}>
+                  <Link to={{ pathname: `/this-food${meal._id}` }}>
                     <h2>{meal.name}</h2>
                   </Link>
                 </div>

@@ -49,9 +49,9 @@ const data = {
 
         {
             _id: 3,
-            nutrient: 'Low Fat',
+            nutrient: 'Low Carb',
             image: 'https://i.ibb.co/tMPvK6m/brooke-lark-W9-OKrx-Bqi-ZA-unsplash.jpg',
-            path: 'fat'
+            path: 'low-carb'
 
         },
 

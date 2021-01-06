@@ -5,8 +5,8 @@ export default function NtrDetail(props) {
     const [meal,setMeal] = useState('')
     
     useEffect(()=>{
-        const { name } = props.match.params
-        axios.get(`${process.env.REACT_APP_SERVER_URL}/api/foods/food${name}`)
+        const { id } = props.match.params
+        axios.get(`${process.env.REACT_APP_SERVER_URL}/api/foods/food${id}`)
         .then(res=>{
             setMeal(res.data)
         })

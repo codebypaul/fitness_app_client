@@ -1,70 +1,168 @@
-# Getting Started with Create React App
+# GeneralFit
+GeneralFit is a react app built to teach users about fitness and nutrition.
+We believe fitness should be accessible to everyone, everywhere, regardless of income or access to a gym. With this app, users can learn about everything they need to have a heathly lifestyle.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![Homepage](./Photos/Homepage.png)
 
-## Available Scripts
+----------------------------------------------------------
+### Deployed on Heroku
+[Heroku Live Link](https://generalfit.herokuapp.com/)
 
-In the project directory, you can run:
+----------------------------------------------------------
+## Local Deployment
+----------------------------------------------------------  
+### Github Repostitories
+[Frontend](https://github.com/codebypaul/fitness_app_client)<br/>
+[Backend](https://github.com/codebypaul/fitness_app_backend)
 
-### `npm start`
+### Prerequisites
+* Git
+* Node
+* MongoDB
+* Fork of Repositories
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### Installation
+1. `cd` into repositories
+2. `npm install` node packages
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+### Running Locally
+1. `npm start` to start servers
+2. `open http://localhost:3000` to open the app in your browser
+----------------------------------------------------------
+## Overview
+----------------------------------------------------------
+### Technologies
+* MERN Stack (MongoDB, Express, React, Node)
+* HTML5
+* CSS
+* Javascript
+----------------------------------------------------------
+### User Stories
+As a user, I want to see basic information on the home page. As a user, I want to find workouts sorted by body parts. As a user, I want to find meals. As a user, I want to create fitness plans using the workouts and meals.
 
-### `npm test`
+----------------------------------------------------------
+### Features
+Users can login with Google OAuth to share specific data with an application while keeping their usernames, passwords, and other information private.
+![Login](./Photos/Login.png)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+----------------------------------------------------------
+### Models and Schemas
+#### Workout
+```js
+const workoutSchema = new mongoose.Schema({
+    name:String,
+    picture: String,
+    category: String,
+    sets: Number,
+    reps: Number,
+    description: String
+})
+```
+#### Food
+```js
+const foodSchema = new mongoose.Schema({
+    name: String,
+    ingredients: [String],
+    instructions : [String],
+    nutritionData: [String],
+    category: String,
+    image : String
+})
+```
+#### User
+```js
+const UserSchema = new mongoose.Schema({
+    googleId: {
+        type: String,
+        required: false
+    },
+    displayName: {
+        type: String,
+        required: false
+    },
+    firstName: {
+        type: String,
+        required: true
+    },
+    lastName: {
+        type: String,
+        required: true
+    },
+    email: {
+        type: String,
+    },
+    password: {
+        type: String
+    },
+    DOB: {
+        type: String
+    },
+    image: {
+        type: String,
+    },
+    admin: {
+        type: Boolean,
+        default: false
+    },
+    createdAt: {
+        type: Date,
+        default: Date.now()
+    },
 
-### `npm run build`
+})
+```
+----------------------------------------------------------
+### ERD
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+----------------------------------------------------------
+### Wireframes
+Signup
+![Signup](./Photos/Signup.png)
+Login
+![Login](./Photos/Login.png)
+About
+![About](./Photos/About.png)
+Workouts
+![Workouts](./Photos/Workouts.png)
+Nutrition
+![Nutrition](./Photos/Nutrition.png)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+----------------------------------------------------------
+### Routes
+| Method | Path | Location | Purpose |
+| ------ | ---------------- | -------------- | ------------------- |
+| GET | / | Welcome.js | Home Page |
+| GET | /signup | Signup.js | Signup Page |
+| GET | /login | Login.js | Login Page |
+| GET | /about | About.js | About Page |
+| GET | /profile | Profile.js | User Profile |
+| GET | /workouts | Workouts.js | Workouts Page |
+| GET | /nutrition | Nutrition.js | Nutrition Page |
+| GET | /api/users/test | users.js | Users API |
+| POST | /api/users/register | users.js | Users API |
+| POST | /api/users/login | users.js | Users API |
+| GET | /api/users/current | users.js | Users API |
+| GET | /api/foods/test | food.js | Food API |
+| GET | /api/foods | food.js | Food API |
+| GET | /api/foods/:name | food.js | Food API |
+| GET | /api/foods/category:category | food.js | Food API |
+| POST | /api/foods | food.js | Food API |
+| PUT | /api/foods | food.js | Food API |
+| DELETE | /api/foods/delete/:name | food.js | Food API |
+| GET | /api/foods | food.js | Food API |
+| GET | /api/workouts | workout.js | Workout API |
+| GET | /api/workouts/workout:id | workout.js | Workout API |
+| GET | /api/workouts/category/:name | workout.js | Workout API |
+| POST | /api/workouts | workout.js | Workout API |
+| DELETE | /api/workouts/:id | workout.js | Workout API |
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+----------------------------------------------------------
+### Unsolved Problems and Major Hurdles
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+----------------------------------------------------------
+### Team Members
+- Angel Barranco
+- Felix Muwanguzi
+- Paul Williams
+- Richard Leung
