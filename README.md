@@ -2,6 +2,8 @@
 GeneralFit is a react app built to teach users about fitness and nutrition.
 We believe fitness should be accessible to everyone, everywhere, regardless of income or access to a gym. With this app, users can learn about everything they need to have a heathly lifestyle.
 
+![Homepage](./Photos/Homepage.png)
+
 ----------------------------------------------------------
 ### Deployed on Heroku
 [Heroku Live Link](https://generalfit.herokuapp.com/)
@@ -24,8 +26,8 @@ We believe fitness should be accessible to everyone, everywhere, regardless of i
 2. `npm install` node packages
 
 ### Running Locally
-1. `npm start` to start server
-2. `open http://localhost:3000` to open the site in your browser
+1. `npm start` to start servers
+2. `open http://localhost:3000` to open the app in your browser
 ----------------------------------------------------------
 ## Overview
 ----------------------------------------------------------
@@ -40,64 +42,37 @@ As a user, I want to see basic information on the home page. As a user, I want t
 
 ----------------------------------------------------------
 ### Features
+Users can login with Google OAuth to share specific data with an application while keeping their usernames, passwords, and other information private.
+![Login](./Photos/Login.png)
+
 ----------------------------------------------------------
 ### Models and Schemas
 #### Workout
-```
-{
-
-    name: String,
-    bodypart: String,
-    level: {
-        type: String,
-        required: true,
-    },
-    reps: {
-        type: Number,
-        required: true
-    },
-    sets: {
-        type: Number,
-        required: true
-    },
-    image:{
-        type: String,
-        required: false
-    },
-    description: {
-        type: String,
-        required: true
-    },
-    createdAt : { 
-        type : Date, 
-        default: Date.now 
-    }
-}
-```
-#### Ingredient
-```
-{
-    ingredient: String,
-    quantity: Number,
-    unit: String
-}
+```js
+const workoutSchema = new mongoose.Schema({
+    name:String,
+    picture: String,
+    cloudinary_id: String,
+    category: String,
+    sets: Number,
+    reps: Number,
+    description: String
+})
 ```
 #### Food
-```
-{
+```js
+const foodSchema = new mongoose.Schema({
     name: String,
-    ingredients: [ingredientSchema],
-    difficulty: {
-        type: String,
-        default: 'beginner',
-        enum: ['beginner','intermediate']
-    },
+    ingredients: [String],
+    instructions : [String],
+    nutritionData: [String],
+    category: String,
     image : String
-}
+})
 ```
 #### Fitness Plan
-```
-{
+```js
+const fitnessSchema = new mongoose.Schema({
     workout:[{
         type: mongoose.Schema.Types.ObjectId,
         ref: 'Workout'
@@ -107,12 +82,13 @@ As a user, I want to see basic information on the home page. As a user, I want t
         ref: 'Food'
     }],
     goal: String
-}
+})
 ```
 ----------------------------------------------------------
+### ERD
+
+----------------------------------------------------------
 ### Wireframes
-Homepage
-![Homepage](./Photos/Homepage.png)
 Signup
 ![Signup](./Photos/Signup.png)
 Login
@@ -135,9 +111,29 @@ Nutrition
 | GET | /profile | Profile.js | User Profile |
 | GET | /workouts | Workouts.js | Workouts Page |
 | GET | /nutrition | Nutrition.js | Nutrition Page |
+| GET | /fitness | fitnessController.js | Fitness API |
+| GET | /fitness/:name | fitnessController.js | Fitness API |
+| POST | /fitness | fitnessController.js | Fitness API |
+| PUT | /fitness/:id | fitnessController.js | Fitness API |
+| DELETE | /fitness/:id | fitnessController.js | Fitness API |
+| GET | /foods | foodController.js | Food API |
+| GET | /foods/:name | foodController.js | Food API |
+| GET | /foods/category:category | foodController.js | Food API |
+| POST | /foods | foodController.js | Food API |
+| PUT | /foods | foodController.js | Food API |
+| DELETE | /foods/delete/:name | foodController.js | Food API |
+| GET | /foods | foodController.js | Food API |
+| POST | /workouts | workoutController.js | Workout API |
+| GET | /workouts | workoutController.js | Workout API |
+| GET | /workouts/:id | workoutController.js | Workout API |
+| GET | /workouts/category/:name | workoutController.js | Workout API |
+| DELETE | /workouts/:id | workoutController.js | Workout API |
+| PUT | /workouts/:id | workoutController.js | Workout API |
 
 ----------------------------------------------------------
-### API Reference
+### Unsolved Problems and Major Hurdles
+
+
 ----------------------------------------------------------
 ### Team Members
 - Angel Barranco
