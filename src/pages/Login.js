@@ -66,7 +66,7 @@ const Login = (props) => {
     if (props.user) return <Redirect to='/profile' />
 
     return (
-        <div className="my-4 pb-5">
+        <div className="">
 
                 <div className="card d-flex align-items-center text-center p-5">
                     <h2 className="">
@@ -76,7 +76,7 @@ const Login = (props) => {
                 </div>
 
 
-                <div className="card card-body">
+                <div className="card-body">
                     <h2 className="py-2">Login</h2>
                     <form className="" onSubmit={handleSubmit}>
                         <div className="form-group">

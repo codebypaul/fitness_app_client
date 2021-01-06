@@ -18,8 +18,9 @@ export default function NtrDetail(props) {
                 <div className="card">
                     <img className='medium' src={meal.image} alt={meal.name} />
                     <div className='card-body'>
-                    <h2>{meal.name}</h2>
+                    <h1>{meal.name}</h1>
                     <p>{meal.instructions}</p>
+
                     </div>
                 </div>
             </div>
