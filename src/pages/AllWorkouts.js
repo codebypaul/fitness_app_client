@@ -18,6 +18,8 @@ export default function Workouts(props) {
       });
   }, []);
 
+
+
   return (
     <>
       <div className="main-image-container workouts-img">
@@ -35,6 +37,7 @@ export default function Workouts(props) {
               <a href='/'>
                 <h2>{bodyPart.name}</h2>
               </a>
+              
               
             </div>
           </div>
