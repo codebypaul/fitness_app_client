@@ -9,13 +9,19 @@ const About = () => {
       </div>
 
       <div className="cards mx-auto">
-          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nostrum suscipit distinctio optio officiis natus labore quis iure esse minima! Itaque maxime deleniti quae obcaecati ab placeat voluptates perferendis hic dolores.
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nostrum suscipit distinctio optio officiis natus labore quis iure esse minima! Itaque maxime deleniti quae obcaecati ab placeat voluptates perferendis hic dolores.
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nostrum suscipit distinctio optio officiis natus labore quis iure esse minima! Itaque maxime deleniti quae obcaecati ab placeat voluptates perferendis hic dolores.
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nostrum suscipit distinctio optio officiis natus labore quis iure esse minima! Itaque maxime deleniti quae obcaecati ab placeat voluptates perferendis hic dolores.
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nostrum suscipit distinctio optio officiis natus labore quis iure esse minima! Itaque maxime deleniti quae obcaecati ab placeat voluptates perferendis hic dolores.
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nostrum suscipit distinctio optio officiis natus labore quis iure esse minima! Itaque maxime deleniti quae obcaecati ab placeat voluptates perferendis hic dolores.
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nostrum suscipit distinctio optio officiis natus labore quis iure esse minima! Itaque maxime deleniti quae obcaecati ab placeat voluptates perferendis hic dolores. </p>
+          <p>
+          This an Nutrition and workout application built with react to form an interactive web page. It is pulling from an api built by Team 5(better name is still pending).
+          Api is built using moogose and stored online using mongoDB. This a project built out as a part of a software engineering immersive program at General Assmebly.
+
+          Reason for building this application is to build something that the everyday person would use and because we enjoy working on projects.
+
+          Team Members.
+
+          Paul Williams
+          Angel Barrance
+          Felix Muwanguzi
+          Richard Leung
+          </p>
       </div>
     </>
   );
