@@ -13,10 +13,23 @@ export default function WrkDetail(props){
     },[props.match.params])
     console.log(workout);
     return(
-        <div>
-            <div className="card">
-                <h1 className="card-title">{workout.name}</h1>
-            </div>
-        </div>
+        <>
+        <div className="row center">
+              <div class="card">
+                  <img
+                    class="large"
+                    src={workout.picture}
+                    alt={workout.name}
+                  />
+                <div class="card-body">
+                    <h1>{workout.name}</h1>
+                    <p>Targeted Muscle Group: {workout.category}</p>
+                    <p>Sets: {workout.sets}</p>
+                    <p>Reps: {workout.reps}</p>
+                    <p>{workout.description}</p>
+                </div>
+              </div>
+          </div>
+        </>
     )
 }

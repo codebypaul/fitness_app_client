@@ -14,9 +14,13 @@ export default function NtrDetail(props) {
     console.log(meal);
     if (meal){
         return(
-            <div>
+            <div className='row center'>
                 <div className="card">
-                    <h1>{meal.name}</h1>
+                    <img className='medium' src={meal.image} alt={meal.name} />
+                    <div className='card-body'>
+                    <h2>{meal.name}</h2>
+                    <p>{meal.instructions}</p>
+                    </div>
                 </div>
             </div>
         )
