@@ -13,7 +13,7 @@ We believe fitness should be accessible to everyone, everywhere, regardless of i
 ----------------------------------------------------------  
 ### Github Repostitories
 [Frontend](https://github.com/codebypaul/fitness_app_client)<br/>
-[Backend](https://github.com/fmuwanguzi/fitness-api)
+[Backend](https://github.com/codebypaul/fitness_app_backend)
 
 ### Prerequisites
 * Git
@@ -52,7 +52,6 @@ Users can login with Google OAuth to share specific data with an application whi
 const workoutSchema = new mongoose.Schema({
     name:String,
     picture: String,
-    cloudinary_id: String,
     category: String,
     sets: Number,
     reps: Number,
@@ -70,18 +69,46 @@ const foodSchema = new mongoose.Schema({
     image : String
 })
 ```
-#### Fitness Plan
+#### User
 ```js
-const fitnessSchema = new mongoose.Schema({
-    workout:[{
-        type: mongoose.Schema.Types.ObjectId,
-        ref: 'Workout'
-    }],
-    food:[{
-        type: mongoose.Schema.Types.ObjectId,
-        ref: 'Food'
-    }],
-    goal: String
+const UserSchema = new mongoose.Schema({
+    googleId: {
+        type: String,
+        required: false
+    },
+    displayName: {
+        type: String,
+        required: false
+    },
+    firstName: {
+        type: String,
+        required: true
+    },
+    lastName: {
+        type: String,
+        required: true
+    },
+    email: {
+        type: String,
+    },
+    password: {
+        type: String
+    },
+    DOB: {
+        type: String
+    },
+    image: {
+        type: String,
+    },
+    admin: {
+        type: Boolean,
+        default: false
+    },
+    createdAt: {
+        type: Date,
+        default: Date.now()
+    },
+
 })
 ```
 ----------------------------------------------------------
@@ -111,24 +138,23 @@ Nutrition
 | GET | /profile | Profile.js | User Profile |
 | GET | /workouts | Workouts.js | Workouts Page |
 | GET | /nutrition | Nutrition.js | Nutrition Page |
-| GET | /fitness | fitnessController.js | Fitness API |
-| GET | /fitness/:name | fitnessController.js | Fitness API |
-| POST | /fitness | fitnessController.js | Fitness API |
-| PUT | /fitness/:id | fitnessController.js | Fitness API |
-| DELETE | /fitness/:id | fitnessController.js | Fitness API |
-| GET | /foods | foodController.js | Food API |
-| GET | /foods/:name | foodController.js | Food API |
-| GET | /foods/category:category | foodController.js | Food API |
-| POST | /foods | foodController.js | Food API |
-| PUT | /foods | foodController.js | Food API |
-| DELETE | /foods/delete/:name | foodController.js | Food API |
-| GET | /foods | foodController.js | Food API |
-| POST | /workouts | workoutController.js | Workout API |
-| GET | /workouts | workoutController.js | Workout API |
-| GET | /workouts/:id | workoutController.js | Workout API |
-| GET | /workouts/category/:name | workoutController.js | Workout API |
-| DELETE | /workouts/:id | workoutController.js | Workout API |
-| PUT | /workouts/:id | workoutController.js | Workout API |
+| GET | /api/users/test | users.js | Users API |
+| POST | /api/users/register | users.js | Users API |
+| POST | /api/users/login | users.js | Users API |
+| GET | /api/users/current | users.js | Users API |
+| GET | /api/foods/test | food.js | Food API |
+| GET | /api/foods | food.js | Food API |
+| GET | /api/foods/:name | food.js | Food API |
+| GET | /api/foods/category:category | food.js | Food API |
+| POST | /api/foods | food.js | Food API |
+| PUT | /api/foods | food.js | Food API |
+| DELETE | /api/foods/delete/:name | food.js | Food API |
+| GET | /api/foods | food.js | Food API |
+| GET | /api/workouts | workout.js | Workout API |
+| GET | /api/workouts/workout:id | workout.js | Workout API |
+| GET | /api/workouts/category/:name | workout.js | Workout API |
+| POST | /api/workouts | workout.js | Workout API |
+| DELETE | /api/workouts/:id | workout.js | Workout API |
 
 ----------------------------------------------------------
 ### Unsolved Problems and Major Hurdles
