@@ -79,14 +79,14 @@ const Signup = () => {
 
     if (redirect) return <Redirect to='/login' />
     return (
-        <div className="my-4 pb-5">
-            <div className="card d-flex align-items-center p-5">
+        <div className="">
+            <div className="card">
                 <h2 className="">
                     Sign up with your Google account
                 </h2>
                 <GoogleBtn responseSuccess={responseSuccess}/>
             </div>
-            <div className="card card-body my-3">
+            <div className="card-body">
                 <h2 className="py-2">Signup</h2>
                 <form onSubmit={handleSubmit}>
                     <div className="form-group">
@@ -116,6 +116,14 @@ const Signup = () => {
                     <button type="submit" className="btn btn-primary float-right">Submit</button>
                 </form>
             </div>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
         </div>
     )
 }

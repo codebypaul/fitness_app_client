@@ -6,7 +6,7 @@ function Cards() {
     <div className="grid-container">
       <div className="row center">
         <div class="card">
-          <a href="/">
+          <a href="/nutrition">
             <img
               class="large"
               src="https://images.unsplash.com/photo-1476224203421-9ac39bcb3327?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2100&q=80"
@@ -14,13 +14,13 @@ function Cards() {
             />
           </a>
           <div class="card-body">
-            <a href="/">
+            <a href="/nutrition">
               <h2>View Meals</h2>
             </a>
           </div>
         </div>
         <div class="card">
-          <a href="/">
+          <a href="/workouts">
             <img
               class="large"
               src="https://images.unsplash.com/photo-1581009137042-c552e485697a?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2250&q=80"
@@ -28,7 +28,7 @@ function Cards() {
             />
           </a>
           <div class="card-body">
-            <a href="/">
+            <a href="/workouts">
               <h2>View Workouts</h2>
             </a>
           </div>
@@ -43,12 +43,12 @@ function Cards() {
           </a>
           <div class="card-body">
             <a href="/">
-              <h2>View Plans</h2>
+              <h2>Plans Coming Soon</h2>
             </a>
           </div>
         </div>
         <div class="card">
-          <a href="/">
+          <a href="/about">
             <img
               class="large"
               src="https://images.unsplash.com/photo-1574689211272-bc14e289e223?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2250&q=80"
@@ -56,7 +56,7 @@ function Cards() {
             />
           </a>
           <div class="card-body">
-            <a href="/">
+            <a href="/about">
               <h2>Learn More</h2>
             </a>
           </div>
