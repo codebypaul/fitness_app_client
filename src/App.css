@@ -274,6 +274,13 @@ video {
   object-fit: contain;
 }
 
+.github {
+  background-color: black;
+  position: relative;
+  width: 40px;
+  margin-top: -20px;
+}
+
 /*------- NAVBAR --------*/
 
 .navLink:hover {

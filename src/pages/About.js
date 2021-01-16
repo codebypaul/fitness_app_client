@@ -15,13 +15,21 @@ const About = () => {
 
           Reason for building this application is to build something that the everyday person would use and because we enjoy working on projects.
 
-          Team Members.
-
-          Paul Williams
-          Angel Barrance
-          Felix Muwanguzi
-          Richard Leung
+          
           </p>
+    
+         <div>
+
+           <h3> Team Members</h3>
+          <br></br>
+            <a href="https://github.com/ABarranco95" className="btn">Angel Barranco <img className="github" src="https://i.imgur.com/GpOnmrS.png" alt="image"/></a>
+            <a href="https://github.com/fmuwanguzi" className="btn">Felix Muwanguzi <img className="github" src="https://i.imgur.com/GpOnmrS.png" alt="image"/></a>
+            <a href="https://github.com/codebypaul" className="btn">Paul Williams <img className="github" src="https://i.imgur.com/GpOnmrS.png" alt="image"/></a>
+            <a href="https://github.com/richardleung1" className="btn">Richard Leung <img className="github" src="https://i.imgur.com/GpOnmrS.png" alt="image"/></a>
+         </div>
+
+                
+         
       </div>
     </>
   );
