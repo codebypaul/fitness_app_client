@@ -66,14 +66,11 @@ const Login = (props) => {
     if (props.user) return <Redirect to='/profile' />
 
     return (
-        <div className="">
-
-                <div className="card d-flex align-items-center text-center p-5">
-                    <h2 className="">
-                        Login with your Google account
-                    </h2>
-                    <GoogleBtn responseSuccess={responseSuccess}/>
-                </div>
+        <div className="text-center">
+            <h2 className="my-5">
+                Login with your Google account
+            </h2>
+            <GoogleBtn responseSuccess={responseSuccess} className="my-5"/>
 
 
                 <div className="card-body">
